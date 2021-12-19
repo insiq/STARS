@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	android:title="@string/bokeh_settings">
+
+	<com.example.bokeh.SettableMappedIndexPreference
+		android:widgetLayout="@layout/settable_preference"
+		android:key="count"
+		android:title="Количество">
+	</com.example.bokeh.SettableMappedIndexPreference>
+
+	<PreferenceCategory
+		android:title="Цвет">
+		<com.example.bokeh.SettableMappedIndexPreference
+			android:widgetLayout="@layout/settable_preference"
+			android:key="min_transparency"
+			android:title="Минимальная прозрачность">
+		</com.example.bokeh.SettableMappedIndexPreference>
+		<com.example.bokeh.SettableMappedIndexPreference
+			android:widgetLayout="@layout/settable_preference"
+			android:key="max_transparency"
+			android:title="Максимальная прозрачность">
+		</com.example.bokeh.SettableMappedIndexPreference>
+		<com.example.bokeh.SettableMappedIndexPreference
+			android:widgetLayout="@layout/settable_preference"
+			android:key="brightness"
+			android:title="Яркость">
+		</com.example.bokeh.SettableMappedIndexPreference>
+	</PreferenceCategory>
+
+	<PreferenceCategory
+		android:title="Размер">
+		<com.example.bokeh.SettableMappedIndexPreference
+			android:widgetLayout="@layout/settable_preference"
+			android:key="min_radius"
+			android:title="Минимальный размер">
+		</com.example.bokeh.SettableMappedIndexPreference>
+		<com.example.bokeh.SettableMappedIndexPreference
+			android:widgetLayout="@layout/settable_preference"
+			android:key="max_radius"
+			android:title="Максимальный размер">
+		</com.example.bokeh.SettableMappedIndexPreference>
+	</PreferenceCategory>
+
+	<PreferenceCategory
+		android:title="Скорость">
+		<com.example.bokeh.SettableMappedIndexPreference
+			android:widgetLayout="@layout/settable_preference"
+			android:key="min_speed"
+			android:title="Минимальная скорость">
+		</com.example.bokeh.SettableMappedIndexPreference>
+		<com.example.bokeh.SettableMappedIndexPreference
+			android:widgetLayout="@layout/settable_preference"
+			android:key="max_speed"
+			android:title="Максимальная скорость">
+		</com.example.bokeh.SettableMappedIndexPreference>
+
+	</PreferenceCategory>
+
+</PreferenceScreen>

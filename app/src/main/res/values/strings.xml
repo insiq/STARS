@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- General -->
+    <skip />
+    <!-- Application name -->
+    <string name="wallpapers">STARS</string>
+
+    <string name="wallpaper_bokeh">STAR</string>
+
+    <string name="bokeh_settings">Настройки</string>
+</resources>
