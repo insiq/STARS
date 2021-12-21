@@ -18,6 +18,7 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.os.Handler;
 import android.service.wallpaper.WallpaperService;
+import android.support.v4.os.OperationCanceledException;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 
@@ -36,8 +37,8 @@ public static final String SHARED_PREFS_NAME = "bokeh_settings";
 	public static final int DEFAULT_BRIGHTNESS = 50;
 	public static final int DEFAULT_FRAME_RATE = 29;
 
-// ��������� ������������ � ����������� ��������
-	public static final int FIGURE_COUNT_MAX_INDEX = 990;//1000 ���� ����������� ����������
+// Установка максимальных и минимальных настроек
+	public static final int FIGURE_COUNT_MAX_INDEX = 990;//1000 звёзд
 	public static final int MIN_RADIUS_MAX_INDEX = 5;
 	public static final int MAX_RADIUS_MAX_INDEX = 9;
 	public static final int MIN_TRANSPARENCY_MAX_INDEX = 255;
@@ -65,16 +66,18 @@ public static final String SHARED_PREFS_NAME = "bokeh_settings";
     public Engine onCreateEngine() {
         return new FigureEngine();
     }
-    //��������� ����������
+    //Настройка количества
     public static Mapper FIGURE_COUNT_MAPPER = new Mapper() {
     	@Override
     	public int calculateToInt(int index) {
         	return index + 10;
         }
-        //��������� ����������
+
     	@Override
     	public float calculateToFloat(int index) {
-        	throw new UnsupportedOperationException("� ��������� ������������ �������������� ����� ���������� ������ ������");
+        	//throw new UnsupportedOperationException("В свойствах присутствует несоответствие между различными типами данных");
+			throw new OperationCanceledException("В свойствах присутствует несоответствие между различными типами данных");
+
         }
 
     	@Override
@@ -87,8 +90,9 @@ public static final String SHARED_PREFS_NAME = "bokeh_settings";
     
     public static Mapper MIN_RADIUS_MAPPER = new Mapper() {
     	@Override
-    	public int calculateToInt(int index) {
-    		throw new UnsupportedOperationException("� ��������� ������������ �������������� ����� ���������� ������ ������");
+    	public int calculateToInt(int index)  {
+    		//throw new UnsupportedOperationException("В свойствах присутствует несоответствие между различными типами данных");
+			throw new OperationCanceledException("В свойствах присутствует несоответствие между различными типами данных");
         }
 
     	@Override
@@ -106,7 +110,8 @@ public static final String SHARED_PREFS_NAME = "bokeh_settings";
     public static Mapper MAX_RADIUS_MAPPER = new Mapper() {
     	@Override
     	public int calculateToInt(int index) {
-    		throw new UnsupportedOperationException("� ��������� ������������ �������������� ����� ���������� ������ ������");
+    		//throw new UnsupportedOperationException("В свойствах присутствует несоответствие между различными типами данных");
+			throw new OperationCanceledException("В свойствах присутствует несоответствие между различными типами данных");
         }
 
     	@Override
@@ -131,7 +136,8 @@ public static final String SHARED_PREFS_NAME = "bokeh_settings";
 
     	@Override
     	public float calculateToFloat(int index) {
-        	throw new UnsupportedOperationException("� ��������� ������������ �������������� ����� ���������� ������ ������");
+        	//throw new UnsupportedOperationException("В свойствах присутствует несоответствие между различными типами данных");
+			throw new OperationCanceledException("В свойствах присутствует несоответствие между различными типами данных");
         }
 
     	@Override
@@ -148,7 +154,8 @@ public static final String SHARED_PREFS_NAME = "bokeh_settings";
 
     	@Override
     	public float calculateToFloat(int index) {
-        	throw new UnsupportedOperationException("� ��������� ������������ �������������� ����� ���������� ������ ������");
+        	//throw new UnsupportedOperationException("В свойствах присутствует несоответствие между различными типами данных");
+			throw new OperationCanceledException("В свойствах присутствует несоответствие между различными типами данных");
         }
 
     	@Override
@@ -160,7 +167,8 @@ public static final String SHARED_PREFS_NAME = "bokeh_settings";
     public static Mapper MIN_SPEED_MAPPER = new Mapper() {
     	@Override
     	public int calculateToInt(int index) {
-        	throw new UnsupportedOperationException("� ��������� ������������ �������������� ����� ���������� ������ ������");
+        	//throw new UnsupportedOperationException("В свойствах присутствует несоответствие между различными типами данных");
+			throw new OperationCanceledException("В свойствах присутствует несоответствие между различными типами данных");
         }
 
     	@Override
@@ -178,7 +186,8 @@ public static final String SHARED_PREFS_NAME = "bokeh_settings";
     public static Mapper MAX_SPEED_MAPPER = new Mapper() {
     	@Override
     	public int calculateToInt(int index) {
-        	throw new UnsupportedOperationException("� ��������� ������������ �������������� ����� ���������� ������ ������");
+        	//throw new UnsupportedOperationException("В свойствах присутствует несоответствие между различными типами данных");
+			throw new OperationCanceledException("В свойствах присутствует несоответствие между различными типами данных");
         }
 
     	@Override
@@ -196,7 +205,8 @@ public static final String SHARED_PREFS_NAME = "bokeh_settings";
     public static Mapper BRIGHTNESS_MAPPER = new Mapper() {
     	@Override
     	public int calculateToInt(int index) {
-        	throw new UnsupportedOperationException("� ��������� ������������ �������������� ����� ���������� ������ ������");
+        	//throw new UnsupportedOperationException("В свойствах присутствует несоответствие между различными типами данных");
+			throw new OperationCanceledException("В свойствах присутствует несоответствие между различными типами данных");
         }
 
     	@Override
@@ -219,7 +229,8 @@ public static final String SHARED_PREFS_NAME = "bokeh_settings";
 
     	@Override
     	public float calculateToFloat(int index) {
-        	throw new UnsupportedOperationException("� ��������� ������������ �������������� ����� ���������� ������ ������");
+        	//throw new UnsupportedOperationException("В свойствах присутствует несоответствие между различными типами данных");
+			throw new OperationCanceledException("В свойствах присутствует несоответствие между различными типами данных");
         }
 
     	@Override
@@ -243,8 +254,7 @@ public static final String SHARED_PREFS_NAME = "bokeh_settings";
 		private long FRAME_INTERVAL = getFrameInterval(FRAME_RATE_MAPPER.calculateToInt(DEFAULT_FRAME_RATE));
 
 
-		private final Paint paint3 = new Paint();
-		private final Paint paint2 = new Paint();
+
 		private final Paint mPaint = new Paint();
 		private float mTouchX = -5;
 		private float mTouchY = -5;
@@ -267,10 +277,7 @@ public static final String SHARED_PREFS_NAME = "bokeh_settings";
 
 		FigureEngine() {
 
-			paint3.setAntiAlias(true);
 
-			paint2.setAntiAlias(true);
-			paint2.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.LIGHTEN));
 
 			final Paint paint = mPaint;
 			paint.setColor(0xffffffff);
